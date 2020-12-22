@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Produtos</h5>
+    <table class="table table-hover table-bordered">
+      <caption>Lista de produtos</caption>
+      <thead class="thead-dark">
+      <tr>
+        <th>#</th>
+        <th>Nome</th>
+        <th>Código</th>
+        <th>Quantidade</th>
+        <th>Preço</th>        
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.code }}</td>
+        <td>{{ product.amount }}</td>
+        <td>R$ {{ product.price }}</td>        
+      </tr>
+      </tbody>
+    </table>
+
+    <a [routerLink]="['/produtos/novo']"  class="btn btn-primary">Novo</a>
+  </div>
+</div>

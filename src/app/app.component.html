@@ -1,0 +1,32 @@
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<header>
+  <nav class="navbar navbar-light bg-light">
+    <span class="navbar-band h1">
+      {{ title }}
+    </span>
+  </nav>
+</header>
+
+<main class="container-fluid" id="content">
+  <div class="row ml-1">
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+      <a [routerLink]="['/produtos']" mat-menu-item>Produtos</a>
+      <a [routerLink]="['/pdv']" mat-menu-item>PDV</a>
+    </mat-menu>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <section id="renderer" class="col-12">
+      <router-outlet></router-outlet>
+    </section>
+  </div>
+</main>
+
+<script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>

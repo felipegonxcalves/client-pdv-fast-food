@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="card-body">
+    <h5>Novo Produto</h5>
+    <hr>
+    <form (submit)="save()">
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="name">Nome produto</label>
+          <input name="name" [(ngModel)]="product.name" type="text" class="form-control" id="name" placeholder="X-egg-burguer">
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="code">Código do produto</label>
+          <input name="code" [(ngModel)]="product.code" type="text" class="form-control" id="code" placeholder="Digite o código">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="amount">Quantidade Estoque</label>
+          <input name="amount" [(ngModel)]="product.amount" type="number" class="form-control" id="amount" placeholder="50">
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="price">Preço do produto</label>
+          <input name="price" [(ngModel)]="product.price" type="text" class="form-control" id="price" placeholder="4,50">
+        </div>
+      </div>
+
+      <input type="submit" value="Salvar" class="btn btn-primary">
+    </form>
+
+    <hr>
+
+    <div class="btn-group">
+      <a [routerLink]="['/produtos']" class="btn btn-secondary">Voltar</a>
+    </div>
+  </div>
+</div>
